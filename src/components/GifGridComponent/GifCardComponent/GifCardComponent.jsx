@@ -1,16 +1,15 @@
-import React from 'react'
+import PropTypes from 'prop-types';
 
-export const GifCardComponent = ({images}) => {
+export const GifCardComponent = ({title, url, id}) => {
   return (
-    <div className='card-grid'>
-        {
-            images.map(img => (
-            <div key={img.id} className='card' >
-                <img src={img.url} alt={img.title} />
-                <p>{img.title}</p>
-            </div>
-            ))
-        }
+    <div className='card' >
+      <img src={url} alt={title} />
+      <p>{title}</p>
     </div>
   )
+}
+
+GifCardComponent.propTypes = {
+  title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired
 }

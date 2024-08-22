@@ -11,7 +11,14 @@ export const GifGridComponent = ({ category }) => {
             <h3>{category}</h3>
 
             {isLoading && <p>Loading...</p>}
-            <GifCardComponent images={images} />
+            <div className='card-grid'>
+
+                {
+                    images.map(img => (
+                        <GifCardComponent key={img.id} {...img} />
+                    ))
+                }
+            </div>
         </div>
   );
 };
