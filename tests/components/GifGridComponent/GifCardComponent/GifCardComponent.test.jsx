@@ -20,4 +20,11 @@ describe('GifCardComponent', () => {
         expect( src ).toBe(url);
         expect( alt ).toBe(title);
     })
+
+    test('should shown the title in a paragraph', () => {
+            
+            render(<GifCardComponent title={ title } url={ url } />);
+            expect( screen.getByText(title) ).toBeTruthy();
+        }
+    )
 })

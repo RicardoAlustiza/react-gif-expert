@@ -2,7 +2,7 @@ import { useState } from "react"
 import { AddCategoryComponent } from "../AddCategoryComponent/AddCategoryComponent"
 import { GifGridComponent } from "../GifGridComponent/GifGridComponent"
 
-export const GiftExpertApp = () => {
+export const GifExpertApp = () => {
     
     const [categories, setCategories] = useState([''])
 
